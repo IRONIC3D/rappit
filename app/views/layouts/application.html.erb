@@ -8,12 +8,16 @@
 </head>
 <body>
 
-  <ui>
-    <li><%= link_to "Home", welcome_index_path %></li>
-    <li><%= link_to "About", welcome_about_path %></li>
-  </ui>
+  <div class="contrainer">
+    <ui class="nav nav-tabs">
+      <li><%= link_to "Home", welcome_index_path %></li>
+      <li><%= link_to "About", welcome_about_path %></li>
+    </ui>
 
-<%= yield %>
+    <%= yield %>
+    
+  </div>
+
 
 </body>
 </html>
