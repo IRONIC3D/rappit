@@ -1,2 +1,25 @@
-<h1>Posts#edit</h1>
-<p>Find me in app/views/posts/edit.html.erb</p>
+<h1>Edit Post - <%= @post.title %></h1>
+
+<div class="row">
+  <div class="col-md-4">
+    <p>Guidelines for posts</p>
+    <ul>
+      <li>Make sure the it rhymes</li>
+      <li>Don't use the letter "A"</li>
+      <li>The incessant use of hashtags will get you banned</li>
+    </ul>
+  </div>
+  <div class="col-md-8">
+    <%= form_for @post do |f| -%>
+      <div class="form-group">
+        <%= f.label :titlee %><br />
+        <%= f.text_field :title, class: 'form-control' %>
+      </div>
+      <div class="form-group">
+        <%= f.label :body %><br />
+        <%= f.text_area :body, class: "form-control" %>
+      </div>
+      <%= f.submit "Save", :disable_with => 'Saveing...', class: 'btn btn-success' %>
+    <% end -%>
+  </div>
+</div>
